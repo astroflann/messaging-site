@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+  <body>
+      <textarea id="UsernameInput" class="Sender" placeholder="Enter your username..."></textarea>
+      <div class="MessageBox" id="MessageDiv">
+        <p id="Message Warning">Please note: Messages are not persistent and will be lost when the page is refreshed.</p>
+        <div id="messages">
+          <div class="message">
+          <p class="Name"></p><p class="Message"></p>
+          </div>
+        </div>
+      </div>
+      <div id="SenderDiv" class="Sender">
+        <textarea id="MessageInput" class="Sender" placeholder="Type your message here..."></textarea>
+        <button id="SendButton" class="Sender">Send</button>
+      </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
