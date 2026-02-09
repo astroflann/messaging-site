@@ -8,15 +8,24 @@
 
   </head>
   <body>
+    <div id="usernameArea">
       <textarea id="UsernameInput" class="Sender" placeholder="Enter your username..."></textarea>
+      <button id="markOnline">Mark Online</button>
+    </div>
+    <div id="container">
+    <div id="OnlineUsersDiv">
+      <h2>Online Users</h2>
+      <ul id="OnlineUsersList"></ul>
+    </div>
       <div class="MessageBox" id="MessageDiv">
-        <p id="Message Warning">Please note: Messages are not persistent and will be lost when the page is refreshed.</p>
+        <p id="MessageWarning">Please note: Messages are not persistent and will be lost when the page is refreshed.</p>
         <div id="messages">
           <div class="message">
           <p class="Name"></p><p class="Message"></p>
           </div>
         </div>
       </div>
+    </div>
       <div id="SenderDiv" class="Sender">
         <textarea id="MessageInput" class="Sender" placeholder="Type your message here..."></textarea>
         <button id="SendButton" class="Sender">Send</button>
