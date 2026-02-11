@@ -8,6 +8,8 @@ app.use(express.static('public'));
 
 let onlineUsers = {};
 
+console.log("Release V1.2, extra data {NONE}")
+
 io.on('connection', (socket) => {
     console.log('A user connected', socket.id);
 
