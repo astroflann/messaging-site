@@ -12,6 +12,8 @@ let listOfOnlineUsers = [];
 let username;
 let online = false;
 
+console.log("Release V1.2, extra data: {NONE}")
+
 function sendMessage(sender, message) {
     if (!online && sender === username) return;
     const messageElement = document.createElement('div');
