@@ -37,6 +37,16 @@ sendButton.addEventListener('click', () => {
     messageInput.value = '';
 });
 
+document.addEventListener('keydown', (event) => {
+    if (event.code === 'Enter') {
+        if (!online) return;
+        const sender = username;
+        const message = messageInput.value.trim();
+        if (!message) return;
+        socket.emit('chat message', { sender, message });
+        messageInput.value = '';
+    }
+});
 markOnlineButton.addEventListener('click', () => {
     username = usernameInput.value.trim() || 'Anonymous';
     online = true;
@@ -49,7 +59,7 @@ markOnlineButton.addEventListener('click', () => {
     alert(`You are now online as "${username}". You can start sending messages!`);
 });
 
-// Add online users on load
+
 socket.on('online users', (users) => {
     users.forEach(u => {
         if (!listOfOnlineUsers.includes(u)) {
