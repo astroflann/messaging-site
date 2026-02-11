@@ -13,6 +13,7 @@ let username;
 let online = false;
 
 console.log("Release V1.2, extra data: {NONE}")
+console.log("this is a test print")
 
 function sendMessage(sender, message) {
     if (!online && sender === username) return;
